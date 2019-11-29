@@ -22,13 +22,13 @@ And set the view to the root of the site by updating the routes file:
 `config/routes.rb`
 `root 'home#index'`
 
-Next we want the GOVUK page template as our application layout, we'll use the [template from here](https://design-system.service.gov.uk/styles/page-template/) and include a couple of Rails parts:
+Next we want the GOVUK page template as our application layout, we'll use the [template from here](https://design-system.service.gov.uk/styles/page-template/) and include a couple of Rails parts, there is a lot here so here is the file:
 
-`app/views/layout/application.html.erb`
+[app/views/layout/application.html.erb](https://github.com/dxw/blog-rails-webpacker-govk-frontend/blob/a45a1518bd92a0f74780a97fcb27bac5b3cf5899/app/views/layouts/application.html.erb)
 
 We'll add some css classes in our view so we can see when things are working:
 
-`app/views/home/index.html.erb`
+[app/views/home/index.html.erb](https://github.com/dxw/blog-rails-webpacker-govk-frontend/blob/a45a1518bd92a0f74780a97fcb27bac5b3cf5899/app/views/home/index.html.erb)
 
 We also want the GOVUK Frontend package, which we get with yarn:
 
@@ -91,11 +91,10 @@ The application pack can go in the `<head></head>`, but he GOVUK JavaScript (and
 
 We also use the `stylesheet_pack_tag` helper to load the styles from our `govuk` pack back in the `<head></head>` again.
 
-[app/views/layouts/application.html.erb]()
+We also use the `stylesheet_pack_tag` helper to load the styles from our govuk pack back in the `<head></head>` again.
 
 ````
 <%= stylesheet_pack_tag 'govuk', 'data-turbolinks-track': 'reload' %>
-<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 …
 <%= javascript_pack_tag 'govuk', 'data-turbolinks-track': 'reload' %>
 </body>
@@ -113,7 +112,7 @@ The 'media' part of the url is really important as it is added by Webpacker befo
 
 Here's the complete layout with static asset paths:
 
-[app/views/layout/application.html.erb]()
+[app/views/layout/application.html.erb](https://github.com/dxw/blog-rails-webpacker-govk-frontend/blob/a683d6a29c05b5eb8ef5b6495603572420500446/app/views/layouts/application.html.erb)
 
 Let's see where we are, we need to run web packer to bundle all the assets into the pack:
 
@@ -134,8 +133,6 @@ To prove it here is our service with JavaScript disabled:
 We should always consider styles and JavaScript [progressive enhancement](https://www.gov.uk/service-manual/technology/using-progressive-enhancement) so let's get this fixed.
 
 To get the styles as a separate file that doesn't need JavaScript to load it we can change the default behaviour in Webpacker:
-
-[config/webpacker.yml]()
 
 `extract_css: true`
 
