@@ -1,24 +1,11 @@
-# README
+# Rails 6, Webpacker and the GOVUK Frontend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the code that goes along with a [blog post]() demonstrating the
+[GOVUK Frontend](https://github.com/alphagov/govuk-frontend) with Rails 6 and
+Webpacker.
 
-Things you may want to cover:
+## To install and run
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- clone the repo
+- install the dependancies with `bundle install` followed by `yarn install`
+- run Rails with `bundle exec rails server`
