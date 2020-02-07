@@ -1,8 +1,8 @@
-# Rails 6, Webpacker and the GOVUK Frontend
+# When Rails met the GOVUK Frontend…
 
-This is the code that goes along with a [blog post]() demonstrating the
-[GOVUK Frontend](https://github.com/alphagov/govuk-frontend) with Rails 6 and
-Webpacker.
+> IMPORTANT: This is not production code, it accompanies a blog post only!
+
+[https://www.dxw.com/2020/02/when-rails-met-the-govuk-frontend](https://www.dxw.com/2020/02/when-rails-met-the-govuk-frontend)
 
 ## To install and run
 
